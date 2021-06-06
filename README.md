@@ -19,7 +19,7 @@
 #endif
 
 // ----------------------------------------------------------
-// Function Prototypes
+// Funçoes Protótipos
 // ----------------------------------------------------------
 
 void display();
@@ -27,7 +27,7 @@ void display();
 void specialKeys();
 
 // ----------------------------------------------------------
-// Global Variables
+// Variaveis Globais
 // ----------------------------------------------------------
 
 double rotate_y=0; 
@@ -35,7 +35,7 @@ double rotate_y=0;
 double rotate_x=0;
 
 // ----------------------------------------------------------
-// display() Callback function
+// display() Chamar função
 // ----------------------------------------------------------
 
 void display(){
@@ -47,8 +47,6 @@ void display(){
   // Reset transformations
   
   glLoadIdentity();
-
-  // Other Transformations
   
   // glTranslatef( 0.1, 0.0, 0.0 );      // Not included
   
@@ -59,9 +57,6 @@ void display(){
   glRotatef( rotate_x, 1.0, 0.0, 0.0 );
   
   glRotatef( rotate_y, 0.0, 1.0, 0.0 );
-  
-
-  // Other Transformations
   
   // glScalef( 2.0, 2.0, 0.0 );          // Not included
 
@@ -166,7 +161,7 @@ void display(){
 }
 
 // ----------------------------------------------------------
-// specialKeys() Callback Function
+// specialKeys() Chamar Função
 // ----------------------------------------------------------
 
 void specialKeys( int key, int x, int y ) {
@@ -202,15 +197,12 @@ void specialKeys( int key, int x, int y ) {
 
 int main(int argc, char* argv[]){
  
-  //  Initialize GLUT and process user parameters
   
   glutInit(&argc,argv);
  
-  //  Request double buffered true color window with Z-buffer
   
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
  
-  // Create window
   
   glutCreateWindow("Awesome Cube");
 
@@ -218,7 +210,7 @@ int main(int argc, char* argv[]){
   
   glEnable(GL_DEPTH_TEST);
 
-  // Callback functions
+  // Chamar Funções
   
   glutDisplayFunc(display);
   
