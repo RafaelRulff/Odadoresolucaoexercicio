@@ -27,7 +27,7 @@ void display();
 void specialKeys();
 
 // ----------------------------------------------------------
-// Variaveis Globais
+// Variáveis Globais
 // ----------------------------------------------------------
 
 double rotate_y=0; 
